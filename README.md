@@ -60,6 +60,7 @@ Una aplicación web que consume la [API oficial de Pokémon](https://pokeapi.co/
 **Clona este repositorio**
 ```bash
 git clone https://github.com/AngelFeriaGarcia/Pokedex-app.git
+```
 
 ---
 
