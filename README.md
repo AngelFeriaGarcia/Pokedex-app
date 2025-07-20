@@ -79,7 +79,7 @@ Tu feedback es muy importante para seguir mejorando esta app.
 Si te ha gustado este proyecto, puedes ayudarme de estas formas:
 
 * Dándole una estrella al repositorio.  
-* Dejando tu opinión, sugerencia o mejora en la sección de "Discussions", ¡lo agradeceré un montón para poder seguir mejorando, aprendiendo y evolucionando!.  
+* Dejando tu opinión, sugerencia o mejora en la sección de "Discussions", ¡lo agradeceré un montón para poder seguir mejorando, aprendiendo y evolucionando!
 * Compartiendo el proyecto con otras personas interesadas en JavaScript y APIs.
 
 [![Dale una estrella ⭐](https://img.shields.io/github/stars/AngelFeriaGarcia/Pokedex-app?style=social)](https://github.com/AngelFeriaGarcia/Pokedex-app/stargazers)
