@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="pokedex.css">
+</head>
+
+<body>
+    <div class="pokedex">
+        <div class="header">
+            <img src="assets/iconopoke1.png" id="reset-logo" alt="Inicio" class="logo" title="Volver al inicio">
+        </div>
+
+        <div class="theme-toggle" id="theme-toggle" title="Activar modo claro">
+            <img src="assets/icon-luna.png" alt="Modo oscuro" id="theme-icon" />
+        </div>
+
+        <div class="music-player">
+            <button id="toggle-music" title="Reproducir música">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <audio id="bg-music" src="assets/musicapokemon1gen.mp3" autoplay loop muted></audio>
+        </div>
+
+        <div class="pokemon-info">
+            <div class="pokemon-number">N° PKM:<span id="pokemon-id"></span></div>
+            <div class="pokemon-name">Nombre:<span id="pokemon-name"></span></div>
+        </div>
+
+        <div class="pokemon-types">
+            <div class="type" id="type1"></div>
+            <div class="type" id="type2"></div>
+        </div>
+
+        <div class="pokemon-sprites">
+            <div class="sprite back-sprite"></div>
+            <div class="sprite front-sprite"></div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button id="prev">Anterior</button>
+            <button id="next">Siguiente</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search-name" placeholder="Buscar por nombre o ID">
+            <button id="search-button">Buscar</button>
+        </div>
+
+    </div>
+
+    <div id="music-message" class="music-popup">
+        <img src="assets/pikachu.png" alt="Música" class="music-icon">
+        <span>Está sonando una pokemelodía. Activa el volumen para disfrutarlo</span>
+    </div>
+
+
+    <script src="pokedex.js"></script>
+</body>
+
+</html>

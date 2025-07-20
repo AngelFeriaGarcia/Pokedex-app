@@ -1,0 +1,338 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in-out;
+  background-color: #0b0b0b;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+/*efecto suave imagen fondo body*/
+@keyframes fadeInBackground {
+  from { opacity: 0.6; }
+  to   { opacity: 1; }
+}
+.pokedex {
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 20px;
+  padding-top: 60px;
+  width: 420px;
+  background-color: #0b0b0b;
+  position: relative
+}
+
+.pokedex-content {
+  margin-top: 60px;
+  /* Espacio para que el logo no tape nada */
+}
+
+.pokemon-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pokemon-number,
+.pokemon-name {
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemon-name {
+  margin-left: 10px;
+}
+
+.pokemon-number span,
+.pokemon-name span {
+  color: #ccc;
+  font-weight: normal;
+  margin-left: 10px;
+  min-width: 80px;
+  text-align: right;
+  display: inline-block;
+}
+
+.pokemon-types {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.type {
+  border: 2px solid #3399ff;
+  padding: 8px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+}
+
+.pokemon-sprites {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.sprite {
+  border: 2px solid #ff6666;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+#search-name {
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  width: 200px;
+}
+
+#search-button {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+#reset-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/*MUSICA Y BOTON DE MUSICA*/
+
+/* Contenedor del botón, posición superior derecha */
+.music-player {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+/* Botón de música estilo alargado */
+#toggle-music {
+  background: #111;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 8px 20px;
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Barras de sonido (ondas) */
+.bar {
+  width: 4px;
+  height: 10px;
+  background: white;
+  animation: sound 0.5s infinite;
+  animation-play-state: paused;
+}
+
+/* Cuando está sonando, activa la animación */
+#toggle-music.playing .bar {
+  animation-play-state: running;
+}
+
+/* Animación de subida y bajada */
+@keyframes sound {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 20px;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+/*ajustes*/
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  left: 325px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-toggle img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(1px 1px 2px #000);
+}
+
+/*TEMA CLARO*/
+
+body.light-theme {
+  background-color: #f1f1f1;
+  background-image: none;
+  color: #000;
+}
+
+body.light-theme .pokedex {
+  background-color: white;
+  border-color: #000;
+}
+
+body.light-theme .pokemon-number,
+body.light-theme .pokemon-name {
+  border-color: black;
+  color: black;
+}
+
+body.light-theme .pokemon-number span,
+body.light-theme .pokemon-name span {
+  color: #444;
+}
+
+body.light-theme button {
+  border-color: black;
+  color: black;
+}
+
+body.light-theme button:hover {
+  background-color: black;
+  color: white;
+}
+
+body.light-theme #search-name {
+  color: black;
+  border-color: black;
+}
+
+body.light-theme #search-button {
+  background-color: black;
+  color: white;
+}
+
+body.light-theme .sprite {
+  background-color: #eee;
+  border-color: #999;
+}
+
+body.light-theme .bar {
+  background: black;
+}
+
+body.light-theme .music-player {
+  background-color: #ddd;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+body.light-theme #toggle-music {
+  background-color: #eee;
+  border-color: black;
+}
+
+/*imagen fondo modo claro*/
+body.light-theme {
+  color: black;
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*mensaje pop up*/
+.music-popup {
+  position: fixed;
+  top: 60%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 90vw;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.music-popup.show {
+  opacity: 1;
+}
+
+.music-icon {
+  width: 24px;
+  height: 24px;
+}
